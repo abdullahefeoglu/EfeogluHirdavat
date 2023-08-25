@@ -16,7 +16,7 @@
 
         protected override void Seed(EfeogluHırdavatDBModel context)
         {
-            context.Brands.AddOrUpdate(x => x.ID, new Brand() { ID = 1, Name = "Crown", Logo = "crown.png" });
+            context.Brands.AddOrUpdate(x => x.ID, new Brand() { ID = 1, Name = "Crown", Logo = "crown.png", IsActive = true, IsDeleted = false });
             context.Admins.AddOrUpdate(x => x.ID, new Admin() { ID = 1, Name = "Abdullah", Surname = "Efeoğlu", Mail = "efeoglu@gmail.com", Password = "123", IsAdmin = true, IsActive = true, IsDeleted = false });
         }
     }
