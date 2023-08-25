@@ -24,7 +24,5 @@ namespace EfeogluHırdavat.Models
 
         [Display(Name = "Silindi")]
         public bool IsDeleted { get; set; }
-
-        public virtual ICollection<Product> Products { get; set; }
     }
 }
