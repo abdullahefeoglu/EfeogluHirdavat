@@ -110,8 +110,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Campaign.cs" />
+    <Compile Include="Models\Catalog.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Communication.cs" />
     <Compile Include="Models\EfeogluHırdavatDBModel.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\SubCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

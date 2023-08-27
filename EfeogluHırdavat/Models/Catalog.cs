@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.Xml.Linq;
 
 namespace EfeogluHırdavat.Models
 {
     public class Catalog
     {
+        public int ID { get; set; }
+
         [Display(Name = "Katalog")]
         [Required(ErrorMessage = "Bu alan zorunludur")]
         [StringLength(maximumLength: 100, ErrorMessage = "Bu alan en fazla 100 karakter olmalıdır")]

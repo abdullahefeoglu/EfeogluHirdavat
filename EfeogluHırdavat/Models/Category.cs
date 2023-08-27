@@ -23,5 +23,6 @@ namespace EfeogluHırdavat.Models
         public bool IsDeleted { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<SubCategory> SubCategories { get; set; }
     }
 }

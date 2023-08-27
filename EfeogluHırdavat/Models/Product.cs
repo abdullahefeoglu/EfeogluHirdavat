@@ -27,6 +27,13 @@ namespace EfeogluHırdavat.Models
         [Display(Name = "Marka")]
         public virtual Brand Brand { get; set; }
 
+        [Display(Name = "Alt Kategori")]
+        public int? SubCategory_ID { get; set; }
+
+        [ForeignKey("SubCategory_ID")]
+        [Display(Name = "Alt Kategori")]
+        public virtual SubCategory SubCategory { get; set; }
+
         [Display(Name = "Ürün")]
         [StringLength(maximumLength: 200, ErrorMessage = "Bu alan en fazla 200 karakter olmalıdır")]
         [Required(ErrorMessage = "Bu alan zorunludur")]

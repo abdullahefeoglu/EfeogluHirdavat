@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace EfeogluHırdavat.Models
 {
-    public class Campaigns
+    public class Campaign
     {
         [Display(Name = "Kampanya")]
         [Required(ErrorMessage = "Bu alan zorunludur")]

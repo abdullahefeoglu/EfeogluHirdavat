@@ -15,6 +15,11 @@ namespace EfeogluHırdavat.Models
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Catalog> Catalogs { get; set; }
+        public virtual DbSet<Campaign> Campaigns { get; set; }
+        public virtual DbSet<Communication> Communications { get; set; }
+        public virtual DbSet<SubCategory> SubCategories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

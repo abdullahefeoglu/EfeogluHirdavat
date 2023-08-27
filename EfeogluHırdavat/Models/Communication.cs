@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.Xml.Linq;
 
 namespace EfeogluHırdavat.Models
 {
     public class Communication
     {
+        public int ID { get; set; }
+
         [Display(Name = "İsminiz")]
         [Required(ErrorMessage = "Bu alan zorunludur")]
         [StringLength(maximumLength: 50, ErrorMessage = "Bu alan en fazla 50 karakter olmalıdır")]
@@ -22,7 +23,7 @@ namespace EfeogluHırdavat.Models
         [Display(Name = "Telefon")]
         [Required(ErrorMessage = "Bu alan zorunludur")]
         [StringLength(maximumLength: 13, ErrorMessage = "Bu alan en fazla 13 karakter olmalıdır")]
-        public Int16 PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         [Display(Name = "E-Mail")]
         [Required(ErrorMessage = "Bu alan zorunludur")]
