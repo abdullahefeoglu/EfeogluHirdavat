@@ -96,7 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\AdminPanel\Assets\css\AdminPanelcss.css" />
+    <Content Include="Areas\AdminPanel\Assets\css\adminpanelcss.css" />
     <Content Include="Areas\AdminPanel\Assets\images\hirdavatcesitleri.png" />
     <Content Include="Areas\AdminPanel\Assets\images\logo.png" />
     <Content Include="Global.asax" />
@@ -104,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -121,6 +124,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Areas\AdminPanel\Views\web.config" />
+    <Content Include="Areas\AdminPanel\Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Default\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Category\Create.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Category\Index.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -131,8 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\AdminPanel\Controllers\" />
-    <Folder Include="Areas\AdminPanel\Views\" />
+    <Folder Include="Areas\AdminPanel\Data\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>

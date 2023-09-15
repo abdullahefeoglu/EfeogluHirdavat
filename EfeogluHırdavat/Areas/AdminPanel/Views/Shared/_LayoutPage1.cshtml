@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Areas/AdminPanel/Assets/css/adminpanelcss.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="topbar">
+        <h1 class="brand">Efeoğlu Hırdavat Yönetim Paneli</h1>
+    </div>
+    <div>
+        <div class="sidebar">
+            <a href="@Url.Action("Index","Default")">Anasayfa</a>
+            <a href="@Url.Action("Index","Category")">Kategori</a>
+            <a href="@Url.Action("Index","Product")">Ürün</a>
+        </div>
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+    
+</body>
+</html>
