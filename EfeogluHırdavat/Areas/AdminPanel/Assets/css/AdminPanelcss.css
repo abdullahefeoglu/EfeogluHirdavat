@@ -71,7 +71,7 @@ body {
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
-    background-color: lawngreen;
+    background-color: #3dd129;
     margin-top: 20px;
 }
 
@@ -94,3 +94,16 @@ body {
         padding: 7px 3px;
 
     }
+
+.listbtn{
+    padding:5px;
+    text-decoration:none;
+    color:black;
+    border-radius:3px;
+}
+.btnduzenle{
+    background-color:dodgerblue;
+}
+.btnsil{
+    background-color:red;
+}
