@@ -1,0 +1,32 @@
+﻿@model EfeogluHırdavat.Models.SubCategory
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+<div class="form">
+    <div class="formheader">
+        Alt Kategori Ekleme Paneli
+    </div>
+    <div class="formcontent">
+        @using (Html.BeginForm("Create", "SubCategory", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                @Html.LabelFor(model => model.Name, new { @class = "formlabel" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "forminput" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "formvalidatemessage" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(model => model.Category_ID, new { @class = "formlabel" })
+                @Html.DropDownList("Category_ID", null, htmlAttributes: new {@class = "forminput"})
+                @Html.ValidationMessageFor(model=> model.Name,"", new { @class = "formvalidatemessage"})
+            </div>
+            <div class="row">
+                <button type="submit" class="formbutton">Alt Kategori Ekle</button>
+                <a href="@Url.Action("Index","SubCategory")" class="backbutton">Alt Kategoriler Sekmesine Geri Dön</a>
+            </div>
+        }
+    </div>
+</div>

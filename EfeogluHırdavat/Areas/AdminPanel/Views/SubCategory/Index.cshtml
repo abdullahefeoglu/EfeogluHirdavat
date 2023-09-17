@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EfeogluHırdavat.Models.Category>
+﻿@model IEnumerable<EfeogluHırdavat.Models.SubCategory>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
@@ -6,15 +6,16 @@
 
 <div class="form">
     <div class="formheader">
-        Kategori Yönetim Paneli
+        Alt Kategori Yönetim Paneli
     </div>
     <div style="padding:15px 0px 10px 10px;">
-        <a href="@Url.Action("Create","Category")" class="linkbutton">Kategori Ekle</a>
+        <a href="@Url.Action("Create","SubCategory")" class="linkbutton">Alt Kategori Ekle</a>
     </div>
     <div class="formcontent">
         <table class="listtable" cellpadding="0" cellspacing="0">
             <tr>
                 <th>@Html.DisplayNameFor(model => model.ID)</th>
+                <th>Kategori</th>
                 <th>@Html.DisplayNameFor(model => model.Name)</th>
                 <th>Durum</th>
                 <th>Seçenekler</th>
@@ -22,24 +23,26 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@Html.DisplayFor(model => item.ID)</td>
-                    <td>@Html.DisplayFor(model => item.Name)</td>
+                    <td>@Html.DisplayFor(model=> item.ID)</td>
+                    <td>@Html.DisplayFor(model=> item.Category.Name)</td>
+                    <td>@Html.DisplayFor(model=> item.Name)</td>
                     <td>
                         @if (item.IsActive == true)
                         {
-                            <span>Aktif Kategori</span>
+                            <span>Aktif Alt Kategori</span>
                         }
                         else
                         {
-                            <span class="pasif">Pasif Kategori</span>
+                            <span class="pasif">Pasif Alt Kategori</span>
                         }
                     </td>
                     <td>
-                        <a href="@Url.Action("Edit","Category", new { id= item.ID })" class="listbtn btnduzenle">Düzenle</a>
-                        <a href="@Url.Action("Delete","Category", new {id = item.ID})" class="listbtn btnsil">Sil</a>
+                        <a href="@Url.Action("Edit","SubCategory", new {id = item.ID})" class="listbtn btnduzenle">Düzenle</a>
+                        <a href="@Url.Action("Delete","SubCategory", new {id = item.ID})" class="listbtn btnsil">Sil</a>
                     </td>
                 </tr>
             }
         </table>
     </div>
 </div>
+

@@ -131,6 +131,9 @@
     <Content Include="Areas\AdminPanel\Views\Category\Create.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Category\Index.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\SubCategory\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\SubCategory\Create.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\SubCategory\Edit.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -142,7 +145,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminPanel\Data\" />
-    <Folder Include="Areas\AdminPanel\Views\SubCategory\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>

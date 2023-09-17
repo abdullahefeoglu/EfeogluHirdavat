@@ -24,6 +24,11 @@ namespace EfeogluHırdavat.Models
         [StringLength(maximumLength: 100, ErrorMessage = "Bu alan alan en fazla 75 karakter olmalıdır")]
         public string Name { get; set; }
 
+        [Display(Name = "Aktif")]
+        public bool IsActive { get; set; }
+
+        [Display(Name = "Silindi")]
+        public bool IsDeleted { get; set; }
         public virtual ICollection<Product> Products { get; set; }
     }
 }
