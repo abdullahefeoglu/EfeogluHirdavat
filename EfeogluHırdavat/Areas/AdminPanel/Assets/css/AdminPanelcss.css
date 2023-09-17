@@ -18,6 +18,7 @@ body {
     height: 1000px;
     background-color: #f5f5f5;
     float: left;
+    padding:10px;
 }
 
     .sidebar a {
@@ -28,14 +29,15 @@ body {
         color: black;
         border-bottom: 1px solid #3f743b;
     }
-
+            
         .sidebar a:hover {
-            background-color: #ffffff;
-            padding: 13px 10px;
+            background-color: #d0d0d0;
+            padding: 10px ;
+            color: white;
         }
 
 .container {
-    width: 1260px;
+    width: 1200px;
     padding: 10px;
     float: left;
 }
@@ -60,20 +62,19 @@ body {
 
 .formheader {
     font-size: 18pt;
-    background-color: #ffd800;
-    padding: 10px;
-    border-radius: 5px;
+    color: #ffd800;
+    padding:3px;
+    border-bottom: 3px solid #ffd800;
 }
 
 .linkbutton {
     text-decoration: none;
     font-size: 13pt;
     color: white;
-    padding: 5px 15px;
+    padding: 5px 20px;
     border-radius: 5px;
     background-color: #3dd129;
-    margin-top: 20px;
-}
+}   
 
 .listtable {
     margin-top:20px;
@@ -101,9 +102,46 @@ body {
     color:black;
     border-radius:3px;
 }
-.btnduzenle{
-    background-color:dodgerblue;
+.btnduzenle {
+    background-color: dodgerblue;
 }
 .btnsil{
     background-color:red;
+    padding:5px 10px;
+}
+
+.row{
+    padding:15px;
+}
+.forminput{
+    width:100%;
+    height:20px;
+    padding:5px;
+}
+.formlabel {
+    display: block;
+    padding: 5px 0;
+    font-size:15pt;
+}
+.backbutton {
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: silver;
+    float:right;
+}
+.backbutton:hover{
+    color:black;
+}
+.formbutton {
+    padding: 10px 15px;
+    border-radius:5px;
+    background-color: #3dd129;
+    border:none;
+}
+.formbutton:hover {
+    background-color:#33b903
+}
+.pasifkategori{
+    color:red;
 }

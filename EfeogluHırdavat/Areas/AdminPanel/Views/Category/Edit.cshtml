@@ -1,25 +1,29 @@
 ﻿@model EfeogluHırdavat.Models.Category
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
     Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
 }
 
 <div class="form">
     <div class="formheader">
-        Kategori Ekleme Paneli
+        Kategori Düzenleme Paneli
     </div>
     <div class="formcontent">
         @using (Html.BeginForm())
         {
             <div class="row">
-                @Html.LabelFor(model => model.Name, new { @class = "formlabel"})
+                @Html.LabelFor(model => model.Name, new { @class = "formlabel" })
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "forminput" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new {@class = "formvalidatemessage"})
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "formvalidatemessage" })
             </div>
             <div class="row">
-                <button type="submit" class="formbutton">Kategori Ekle</button>
+                @Html.EditorFor(model => model.IsActive) Kategoriyi Aktif Hale Getir
+            </div>
+            <div class="row">
+                <button type="submit" class="formbutton">Kategori Düzenle</button>
                 <a href="@Url.Action("Index","Category")" class="backbutton">Kategoriler Sekmesine Geri Dön</a>
             </div>
         }
     </div>
 </div>
+

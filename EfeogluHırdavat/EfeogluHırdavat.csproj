@@ -107,6 +107,7 @@
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\SubCategoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -129,6 +130,7 @@
     <Content Include="Areas\AdminPanel\Views\Default\Index.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Category\Create.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Category\Index.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Category\Edit.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -140,6 +142,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminPanel\Data\" />
+    <Folder Include="Areas\AdminPanel\Views\SubCategory\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>

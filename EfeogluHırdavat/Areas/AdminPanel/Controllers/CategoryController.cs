@@ -43,31 +43,41 @@ namespace EfeogluHırdavat.Areas.AdminPanel.Controllers
         }
 
         // GET: AdminPanel/Category/Edit/5
-        public ActionResult Edit(int id)
+        [HttpGet]
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return RedirectToAction("Index");
+            }
+            Category category = db.Categories.Find(id);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+            return View(category);
         }
 
         // POST: AdminPanel/Category/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Category model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(model);
         }
 
         // GET: AdminPanel/Category/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Category c = db.Categories.Find(id);
+            c.IsDeleted = true; 
+            db.SaveChanges();
+             return RedirectToAction("Index");
         }
 
         // POST: AdminPanel/Category/Delete/5
